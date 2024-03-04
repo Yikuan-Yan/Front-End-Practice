@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hello(){
+           console.log("Hello world"); 
+        }
+        hello();
+        function hello_ret(){
+            return 'hello return'
+        }
+        let a=hello_ret();
+        console.log(a);
+        console.log(hello_ret());
+        hello_para('Alice')
+        function hello_para(name){
+            console.log('hello, '+name);
+        }
+        
+        //作用域
+        let global_var = 'global';
+        function local_var_function(){
+            let local_var = 'local';
+            console.log('global in function: '+global_var)
+            console.log('local in function: '+local_var)
+        }
+        
+        local_var_function()
+        console.log('global out of function: '+global_var)
+        // console.log('local out of function: '+local_var)
+    </script>
+</body>
+</html>
